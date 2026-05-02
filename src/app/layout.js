@@ -1,5 +1,9 @@
+import dns from "node:dns";
+dns.setServers(["8.8.8.8", "8.8.4.4"]); //google dns
+
 import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
 
 const poppins = Poppins({
   variable: "--font-poppins-sans",
@@ -22,6 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light">
       <body className={`${poppins.className} min-h-full flex flex-col`}>
+        <ToastContainer />
         {children}
       </body>
     </html>
