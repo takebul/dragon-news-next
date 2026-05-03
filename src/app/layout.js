@@ -1,8 +1,8 @@
 import dns from "node:dns";
 dns.setServers(["8.8.8.8", "8.8.4.4"]); //google dns
 
-import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
+import { Montserrat, Poppins } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 
 const poppins = Poppins({

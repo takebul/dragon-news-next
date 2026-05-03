@@ -2,11 +2,14 @@
 
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -25,17 +28,25 @@ const LoginPage = () => {
       email,
       password,
       rememberMe: true,
-      callbackURL: "/",
+      fetchOptions: {
+        onSuccess: () => {
+          toast.success("Signin successful");
+          router.push("/");
+        },
+        onError: (error) => {
+          toast.error(error.message);
+        },
+      },
     });
     console.log({ data, error });
 
-    if (error) {
-      toast.error(error.message);
-    }
+    // if (error) {
+    //   toast.error(error.message);
+    // }
 
-    if (data.token) {
-      toast.success("Signup successful");
-    }
+    // if (data.token) {
+    //   toast.success("Signup successful");
+    // }
   };
 
   // console.log(watch("email"));

@@ -1,7 +1,7 @@
 const LoadingPage = () => {
   return (
     <div className="flex h-[85vh] items-center justify-center">
-      News by category loading
+      <p>News by category loading </p>
       <span className="loading loading-spinner text-info"></span>
     </div>
   );

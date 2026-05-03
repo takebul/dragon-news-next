@@ -1,0 +1,16 @@
+{
+  "products": [
+    { "id": 1, "name": "Laptop", "price": 5000 },
+    { "id": 2, "name": "Tv", "price": 1200 },
+    { "id": 3, "name": "Freeze", "price": 28000 },
+    { "id": 4, "name": "Fan", "price": 900 },
+    { "id": 5, "name": "Table", "price": 2000 },
+    { "id": 6, "name": "Mobile", "price": 50000 },
+    { "id": 7, "name": "Bed", "price": 38000 }
+  ],
+  "customer": [
+    { "name": "Takebul Islam", "age": 21 },
+    { "name": "Rakebul Islam", "age": 23 },
+    { "name": "Sakebul Islam", "age": 22 }
+  ]
+}
